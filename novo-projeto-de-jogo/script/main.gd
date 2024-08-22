@@ -28,18 +28,18 @@ func _on_score_timer_timeout():
 
 
 func _on_start_timer_timeout():
-	
-	pass # Replace with function body.
-	var bug =bug_scene. instantiate()
+	pass #Replace with function body
+	var bug = bug_scene.instantiate()
 	var bug_location = $BugPath/BugPathLocation
 	bug_location.proress_ratio = randf()
 	
+	
 	var direction = bug_location.rotation + PI /2
-	bug.position =bug_location.position
+	bug.position = bug_location.position
 	direction += randf_range(-PI /4, PI /4)
-	
-	
-	
+	var velocity =Vector2(randf_range(150.0,250.0), 0.0)
+	bug.linear_velocity = velocity.rotated(direction)
+	add_child(bug)
 	
 
 
