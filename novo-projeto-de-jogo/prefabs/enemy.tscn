@@ -36,6 +36,8 @@ animations = [{
 radius = 48.0416
 
 [node name="enemy" type="RigidBody2D"]
+position = Vector2(331, 125)
+collision_layer = 3
 gravity_scale = 0.0
 script = ExtResource("1_b80lp")
 
@@ -50,6 +52,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_fw21v")
 
 [node name="visible" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 4)
 scale = Vector2(0.492188, 0.5)
 
 [connection signal="screen_exited" from="visible" to="." method="_on_visible_screen_exited"]

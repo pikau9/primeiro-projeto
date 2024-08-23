@@ -65,6 +65,8 @@ animations = [{
 radius = 24.0208
 
 [node name="palyer" type="Area2D"]
+position = Vector2(95, 80)
+collision_mask = 3
 script = ExtResource("1_sxxs0")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
@@ -74,7 +76,7 @@ animation = &"move_up"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_kryxt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
